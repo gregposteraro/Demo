@@ -1,0 +1,16 @@
+https://skyscanner.github.io/slate/#flights-live-prices
+
+
+For Averages: Hotwire API?
+
+
+http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/GB/USD/en-GB/US/anywhere/anytime/anytime?apiKey=prtl6749387986743898559646983194
+
+
+
+prtl6749387986743898559646983194
+
+prtl6749387986743898559646983194
+
+http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/US/CDG/EDI/2017-12-12/2017-12-20?apiKey=<your_api_key>
+http://partners.api.skyscanner.net/apiservices/browsequotes/v1.0/GB/GBP/en-GB/US/CDG/EDI/2017-12-12/2017-12-20?apiKey=prtl6749387986743898559646983194
