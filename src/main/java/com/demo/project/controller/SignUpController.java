@@ -1,9 +1,12 @@
 package com.demo.project.controller;
 
+import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,22 +22,19 @@ import com.demo.project.model.User;
 @RequestMapping(value = "signUpLogin")
 public class SignUpController {
 
-	@Value("#{UserJDBCTemplate}")
 	private UserDAO dao;
-//	@RequestMapping(value = "/onSignUp", method = RequestMethod.POST)
-//	ResponseEntity<?> onSignUp() {
-//
-//		System.out.println("In the Controller");
-//		
-//		
-//		ResponseEntity response = null;
-//		return response;
-//	}
+	private ApplicationContext context;
+	
+	@PostConstruct
+	public void init() {
+		context = new ClassPathXmlApplicationContext("Spring-Module.xml");
+		dao = (UserDAO) context.getBean("UserDAO");
+	}
 	
 	@RequestMapping(value = "onSignUp", method = RequestMethod.POST)
 	String onSignUp(HttpServletRequest request,
             HttpServletResponse response, Model model) {
-
+		
 		System.out.println("In the Controller");
 		System.out.println(request.getParameterMap().keySet());
 		System.out.println(request.getParameterMap().values());
