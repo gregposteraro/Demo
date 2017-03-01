@@ -1,27 +1,48 @@
 package com.demo.project.model;
 
+import java.util.Date;
+
 public class Park {
 
 	private String parkName;
 	private String longitude;
 	private String latitude;
-	private String dateEstablished;
-	private String parkArea;
+	private Date dateEstablished;
+	private Integer parkArea;
 	private Integer parkVisitors;
 	private String parkDescription;
 	
-	public Park(String parkName, String parkLocation, String dateEstablished, String parkArea, Integer parkVisitors, String parkDescription) {
-		this.parkName = parkName;
-		this.longitude = longitude;
-		this.latitude = latitude;
-		this.dateEstablished = dateEstablished;
-		this.parkArea = parkArea;
-		this.parkVisitors = parkVisitors;
-		this.parkDescription = parkDescription;
-	}
+
 	public Park() {
 
 	}
+	
+	
+	
+	public Date getDateEstablished() {
+		return dateEstablished;
+	}
+
+
+
+	public void setDateEstablished(Date dateEstablished) {
+		this.dateEstablished = dateEstablished;
+	}
+
+
+
+	public Integer getParkArea() {
+		return parkArea;
+	}
+
+
+
+	public void setParkArea(Integer parkArea) {
+		this.parkArea = parkArea;
+	}
+
+
+
 	public String getParkName() {
 		return parkName;
 	}
@@ -40,18 +61,7 @@ public class Park {
 	public void setLatitude(String latitude) {
 		this.latitude = latitude;
 	}
-	public String getDateEstablished() {
-		return dateEstablished;
-	}
-	public void setDateEstablished(String dateEstablished) {
-		this.dateEstablished = dateEstablished;
-	}
-	public String getParkArea() {
-		return parkArea;
-	}
-	public void setParkArea(String parkArea) {
-		this.parkArea = parkArea;
-	}
+	
 	public Integer getParkVisitors() {
 		return parkVisitors;
 	}
