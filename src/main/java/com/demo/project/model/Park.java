@@ -5,6 +5,8 @@ import java.util.Date;
 public class Park {
 
 	private String parkName;
+	private String province;
+	private String country;
 	private String longitude;
 	private String latitude;
 	private Date dateEstablished;
@@ -19,6 +21,30 @@ public class Park {
 	
 	
 	
+	public String getProvince() {
+		return province;
+	}
+
+
+
+	public void setProvince(String province) {
+		this.province = province;
+	}
+
+
+
+	public String getCountry() {
+		return country;
+	}
+
+
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+
+
 	public Date getDateEstablished() {
 		return dateEstablished;
 	}

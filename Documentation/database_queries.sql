@@ -10,7 +10,15 @@
 --GRANT ALL PRIVILEGES ON demo.users TO 'user1'@'localhost';
 
 
-
-create table users (uid VARCHAR(20) NOT NULL, password VARCHAR(20) NOT NULL, email VARCHAR(50));
+-- USER TABLE
+create table users (uid VARCHAR(20) NOT NULL PRIMARY KEY, password VARCHAR(20) NOT NULL, email VARCHAR(50));
 
 insert into users (uid, password) values ('grepos','itsadog');
+
+
+--PARKS TABLE
+create table parks (name VARCHAR(50) NOT NULL PRIMARY KEY,country VARCHAR(50), province VARCHAR(50), latitude VARCHAR(10) NOT NULL, longitude VARCHAR(10) NOT NULL,annualVisitors INTEGER, parkArea INTEGER, dtEst DATE, description VARCHAR(255));
+
+
+
+

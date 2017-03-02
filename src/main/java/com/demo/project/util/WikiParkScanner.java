@@ -49,7 +49,7 @@ public class WikiParkScanner {
 			    line = br.readLine();
 			    System.out.println(line); //2 Maine
 			    lineArray = line.split(">");
-			    //park.set(lineArray[2].substring(0, lineArray[2].indexOf('<')));
+			    park.setProvince(lineArray[2].substring(0, lineArray[2].indexOf('<')));
 			    printArryStrings(lineArray);
 			    
 			    line = br.readLine(); //19: "44.35, -68.21"
@@ -95,8 +95,8 @@ public class WikiParkScanner {
 		    }
 		   
 		    for(Park p: retArray){
-		    	System.out.println("Insert into parks(name, latitude, longitude, dateEst, parkArea, annualVisitors)");
-		    	System.out.println("VALUES("+ p.getParkName()+"," + p.getLatitude()+"," + p.getLongitude() + "," +  dateToString(p.getDateEstablished()) + "," + p.getParkArea() +","+ p.getParkVisitors()+");");
+		    	System.out.println("Insert into parks(name, country, province, latitude, longitude, dtEst, parkArea, annualVisitors)" + "VALUES('"+ p.getParkName()+"',"+ "'United States','"+p.getProvince() +"','"+ p.getLatitude()+"','" + p.getLongitude() + "','" +  dateToString(p.getDateEstablished()) + "'," + p.getParkArea() +","+ p.getParkVisitors()+");");
+		    	//System.out.println();
 		    }
 		} finally {
 		    br.close();
@@ -111,7 +111,7 @@ public class WikiParkScanner {
 	}
 
 	private static String dateToString(Date d){
-		DateFormat df = new SimpleDateFormat("MM/dd/yyy");  
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");  
 		return df.format(d);
 
 	}
