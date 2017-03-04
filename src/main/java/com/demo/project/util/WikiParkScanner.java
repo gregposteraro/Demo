@@ -25,7 +25,7 @@ public class WikiParkScanner {
 		    String[] lineArray;
 		    
 		    Park park = new Park();
-		    
+		     
 		    
 		    
 		    ArrayList<Park> retArray = new ArrayList<Park>();
