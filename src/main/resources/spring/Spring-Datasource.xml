@@ -16,4 +16,7 @@
 	<bean id="UserDAO" class="com.demo.project.dao.UserJDBCTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	<bean id="ParkDAO" class="com.demo.project.dao.ParkJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
 </beans>

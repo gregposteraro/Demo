@@ -18,7 +18,7 @@ public class WikiParkScanner {
 	public static void main(String[] args) throws IOException, ParseException {
 		// TODO Auto-generated method stub
 
-		BufferedReader br = new BufferedReader(new FileReader("E:/development/projects/Demo/src/main/resources/data/USNationalParks.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("C:\\Dev\\Demo\\Demo\\src\\main\\resources\\data\\USNationalParks.txt"));
 		try {
 		    StringBuilder sb = new StringBuilder();
 		    String line = "";
@@ -95,7 +95,7 @@ public class WikiParkScanner {
 		    }
 		   
 		    for(Park p: retArray){
-		    	System.out.println("Insert into parks(name, country, province, latitude, longitude, dtEst, parkArea, annualVisitors)" + "VALUES('"+ p.getParkName()+"',"+ "'United States','"+p.getProvince() +"','"+ p.getLatitude()+"','" + p.getLongitude() + "','" +  dateToString(p.getDateEstablished()) + "'," + p.getParkArea() +","+ p.getParkVisitors()+");");
+		    	System.out.println("Insert into parks(name, country, province, latitude, longitude, dtEst, parkArea, annualVisitors)" + "VALUES('"+ p.getParkName()+"',"+ "'United States','"+p.getProvince() +"','"+ p.getLatitude()+"','" + p.getLongitude() + "','" +  dateToString(p.getDateEstablished()) + "'," + p.getParkArea() +","+ 				p.getParkVisitors()+");");
 		    	//System.out.println();
 		    }
 		} finally {
